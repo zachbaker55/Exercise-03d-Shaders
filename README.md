@@ -2,6 +2,8 @@
 
 Exercise for MSCH-C220
 
+A demonstration of this exercise is available at [https://youtu.be/6hrpde-AzX8](https://youtu.be/6hrpde-AzX8).
+
 This is the last exercise for you to experiment with juicy features in our brick-breaker game. The exercise will focus on adding shaders to several elements and a face to the paddle.
 
 Fork this repository. When that process has completed, make sure that the top of the repository reads [your username]/Exercise-03d-Shaders. Edit the LICENSE and replace BL-MSCH-C220-F22 with your full name. Commit your changes.
