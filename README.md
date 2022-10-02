@@ -175,7 +175,7 @@ func start_fever():
 	$Timer.start()
 	var fever_indicator = get_node_or_null("/root/Game/UI/HUD/Fever")
 	if fever_indicator != null:
-		background.use_parent_material = false
+		fever_indicator.use_parent_material = false
 ```
 
 Then turn it off when we are no longer feverish (in `_on_Timer_timeout`):
@@ -187,7 +187,7 @@ func _on_Timer_timeout():
 	else:
 		var fever_indicator = get_node_or_null("/root/Game/UI/HUD/Fever")
 		if fever_indicator != null:
-			background.use_parent_material = true
+			fever_indicator.use_parent_material = true
 ```
 
 When the game is not in fever mode, we would like to make the fever bar a little more colorful.
@@ -305,7 +305,7 @@ func start_fever():
 	$Timer.start()
 	var fever_indicator = get_node_or_null("/root/Game/UI/HUD/Fever")
 	if fever_indicator != null:
-		background.use_parent_material = false
+		fever_indicator.use_parent_material = false
 	var background = get_node_or_null("/root/Game/Background")
 	if background != null:
 		background.use_parent_material = false
@@ -320,7 +320,7 @@ func _on_Timer_timeout():
 	else:
 		var fever_indicator = get_node_or_null("/root/Game/UI/HUD/Fever")
 		if fever_indicator != null:
-			background.use_parent_material = true
+			fever_indicator.use_parent_material = true
 		var background = get_node_or_null("/root/Game/Background")
 		if background != null:
 			background.use_parent_material = true
@@ -330,7 +330,7 @@ func _on_Timer_timeout():
 
 ## Rotating Background Colors
 
-When we aren't in fever mode, we want the game background color to subltly animate. 
+When we aren't in fever mode, we want the game background color to subltly animate. In `res://Game.tscn`, add a Tween node as a child of Background. Then attach the following script to the Background node (save it as `res://Effects/Background.gd`):
 
 ```
 extends ColorRect
